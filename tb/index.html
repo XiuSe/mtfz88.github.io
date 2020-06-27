@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>L.F. 个人主页|淘宝小姐姐</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="L.F. 个人主页|淘宝小姐姐" />
+    <meta name="description" content="L.F. 个人主页|淘宝小姐姐" />
+    <link rel="icon" type="image/ico" href="../favicon.png">
+    <link rel="stylesheet" href="../inc/index/css/main.css" />
+    <script src="../inc/js/jquery.min.js"></script>
+</head>
+
+<style>
+    .box {
+        width: 75%;
+        height: 75%;
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .hb {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        transform: rotateY(360deg);
+        transition: all 0.3s;
+    }
+    /*响应式走起*/
+    /*响应式介绍*/
+    /*用法 http://www.sharedblog.cn/?post=160  */
+    
+    @media screen and (min-width: 980px) and (max-width: 1200px) {
+        .box {
+            width: 50%;
+        }
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 979px) {
+        .box {
+            width: 65%;
+        }
+    }
+    
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+        .box {
+            width: 95%;
+        }
+    }
+</style>
+<script>
+    $(function() {
+        $.get('https://api.huanmi8.cn/api/rand.tbimg.php?format=json', function(data) {
+            document.getElementById('FL').src = data.pic_url;
+        });
+    });
+
+    function gogogo() {
+        $.get('https://api.huanmi8.cn/api/rand.tbimg.php?format=json', function(data) {
+            document.getElementById('FL').src = data.pic_url;
+        });
+    };
+</script>
+
+<body class="is-loading">
+    <div id="wrapper">
+        <section align="center">
+            <header>
+                <ul class="icons">
+                    <li><a href="../" title="返回首页">点击这里返回首页咯</a></li>
+                    <li><a onclick="gogogo()" title="首页">再来一个淘宝小姐姐</a></li>
+                </ul>
+                <div class="box"> <img class="hb" src="" alt="" id="FL"> </div>
+            </header>
+            <h1><br>
+            </h1>
+        </section>
+        <footer id="footer"> <span class="copyright" style="color:#000000"> Copyright © 2012-2020 <a
+					href="http://lilililifeng.gitee.io/">L.F.</a> 版权所有</span> </footer>
+        <script>
+            if ('addEventListener' in window) {
+                window.addEventListener('load', function() {
+                    document.body.className = document.body.className.replace(/\bis-loading\b/, '')
+                });
+                document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '')
+            }
+        </script>
+        <script type="text/javascript" language="javascript">
+            function setTime() {
+                var create_time = Math.round(new Date(Date.UTC(2014, 3, 13, 12, 38, 0)).getTime() / 1000);
+                var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+                currentTime = secondToDate((timestamp - create_time));
+                currentTimeHtml = currentTime[0] + ' 年 ' + currentTime[1] + ' 天 ' + currentTime[2] + ' 时 ' + currentTime[3] + ' 分 ' + currentTime[4] + ' 秒';
+                document.getElementById("htmer_time").innerHTML = currentTimeHtml
+            }
+
+            function secondToDate(second) {
+                if (!second) {
+                    return 0
+                }
+                var time = new Array(0, 0, 0, 0, 0);
+                if (second >= 365 * 24 * 3600) {
+                    time[0] = parseInt(second / (365 * 24 * 3600));
+                    second %= 365 * 24 * 3600
+                }
+                if (second >= 24 * 3600) {
+                    time[1] = parseInt(second / (24 * 3600));
+                    second %= 24 * 3600
+                }
+                if (second >= 3600) {
+                    time[2] = parseInt(second / 3600);
+                    second %= 3600
+                }
+                if (second >= 60) {
+                    time[3] = parseInt(second / 60);
+                    second %= 60
+                }
+                if (second > 0) {
+                    time[4] = second
+                }
+                return time
+            }
+            setInterval(setTime, 1000);
+        </script>
+    </div>
+</body>
+
+</html>

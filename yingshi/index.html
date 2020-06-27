@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>L.F. 个人主页|全网VIP影视会员解析</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords" content="L.F. 个人主页|全网VIP影视会员解析|支持爱奇艺、优酷、土豆、乐视、搜狐等视频解析." />
+    <meta name="description" content="L.F. 个人主页|全网VIP影视会员解析|VIP影视会员" />
+    <link rel="icon" type="image/ico" href="../favicon.png">
+    <link rel="stylesheet" href="../inc/index/css/main.css" />
+</head>
+
+<body class="is-loading">
+    <div id="wrapper">
+        <section id="main">
+            <form name="form">
+                <p align="center" style="background-color:#A39AE5;color:#FF0000">↓ ↓ ↓ 在下方粘贴视频地址，点击开始解析即可↓ ↓ ↓ </p>
+            </form>
+            <form>
+                <p align="center" style="color:#0824FF"> 视频地址:
+                    <input id="url" style="width:100%;" placeholder="视频地址">
+                </p>
+            </form>
+            <form>
+                <ul class="icons">
+                    <li><a onclick="play()" title="首页"> 开 始 解 析 </a></li>
+                    <li><a href="../" title="首页"> 返 回 首 页 </a></li>
+                </ul>
+            </form>
+            <form>
+                <p style="background-color:#A39AE5;color:#FF0000">支持以下网站(当然可能支持更多，你可以自行尝试)</p>
+                <ul class="icons">
+                    <li><a target="_blank" href="http://v.qq.com/" title="腾讯视频">腾讯视频</a></li>
+                    <li><a target="_blank" href="http://www.iqiyi.com/" title="爱 奇 艺">爱 奇 艺</a></li>
+                    <li><a target="_blank" href="http://www.mgtv.com/" title="芒果ＴＶ">芒果ＴＶ</a></li>
+                    <li><a target="_blank" href="http://www.tudou.com/" title="土豆视频">土豆视频</a></li>
+                    <li><a target="_blank" href="http://www.youku.com/" title="优酷视频">优酷视频</a></li>
+                    <li><a target="_blank" href="http://www.le.com/" title="乐视视频">乐视视频</a></li>
+                    <li><a target="_blank" href="http://tv.sohu.com/" title="搜狐视频">搜狐视频</a></li>
+                    <li><a target="_blank" href="ttp://www.pptv.com/" title="ＰＰＴＶ">ＰＰＴＶ</a></li>
+                    <li><a target="_blank" href="http://www.ixigua.com/" title="腾讯视频">西瓜视频</a></li>
+                </ul>
+            </form>
+        </section>
+        <footer id="footer"> <span class="copyright" style="color:#000000"> Copyright © 2012-2020 <a
+          href="http://lilililifeng.gitee.io/">L.F.</a> 版权所有</span> </footer>
+        <script>
+            if ('addEventListener' in window) {
+                window.addEventListener('load', function() {
+                    document.body.className = document.body.className.replace(/\bis-loading\b/, '')
+                });
+                document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '')
+            }
+        </script>
+        <script type="text/javascript">
+            function play() {
+                window.open("http://api.baiyug.vip/index.php?url=" + document.getElementById("url").value)
+            }
+        </script>
+    </div>
+</body>
+
+</html>
